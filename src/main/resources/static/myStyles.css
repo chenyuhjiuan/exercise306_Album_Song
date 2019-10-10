@@ -1,119 +1,30 @@
-body{
-
-    background-image: url(https://res.cloudinary.com/dhg2lpfid/image/upload/v1570167265/Attachment-1_1_vgra0i.jpg);
-
-    background-size: cover;
-
-    /*font-family: 'Scheherazade', serif;*/
-
-    font-size: 20px;
-
+/*table*/
+.content-table{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.1em;
+    min-width: 1100px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
-
-
-
-h1{
-
-    text-align: center;
-
-
-
-}
-
-
-
-h2{
-
-    text-align: center;
-
-}
-
-
-
-h3{
-
+.content-table thead tr {
+    background-color: black;
+    color:#ffffff;
     text-align: left;
+    font-width: bold;
+}
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
 
 }
-
-
-
-a{
-
-    color: darkblue;
-
+.content-table tbody tr{
+    border-bottom: 1px solid #e69900;
 }
-
-
-
-.container{
-
-    background-color: lightskyblue;
-
-    width: max-content;
-
-    /*margin-left: 20px;*/
-
-    /*margin-right: 20px;*/
-
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
 }
-
-
-
-.container-fluid{
-
-    background-color: lightskyblue;
-
-}
-
-
-
-.jumbotron{
-
-    background-color: lightskyblue;
-
-    padding-top: 15px;
-
-    padding-left: 15px;
-
-    padding-right: 15px;
-
-    padding-bottom: 15px;
-
-
-
-}
-
-
-
-.card{
-
-    text-align: center;
-
-    width: 55rem;
-
-}
-
-
-
-.table{
-
-    background-color: lightskyblue;
-
-    text-align: center;
-
-}
-
-
-
-.center {
-
-    display: block;
-
-    margin-left: auto;
-
-    margin-right: auto;
-
-    width: 100%;
-
+.content-table tbody tr:last-of-type{
+    border-bottom: 2px solid black;
 }

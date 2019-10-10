@@ -21,7 +21,7 @@
 
             <span th:if="${#fields.hasErrors('songname')}" th:errors="*{songname}">&nbsp;&nbsp;</span>
 
-            Description:&nbsp;&#8239;<input type="text" th:field="*{description}" />
+            Description:&nbsp;<input type="text" th:field="*{description}" />
 
             <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
 

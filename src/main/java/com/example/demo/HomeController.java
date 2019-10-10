@@ -119,7 +119,7 @@ public class HomeController {
     public String delAlbum(@PathVariable("id") long id){
 
         albumRepository.deleteById(id);
-        return "index";
+        return "redirect:/";
     }
 
 
@@ -154,7 +154,7 @@ public class HomeController {
 
         songRepository.deleteById(id);
 
-        return "index";
+        return "redirect:/";
 
     }
 }
