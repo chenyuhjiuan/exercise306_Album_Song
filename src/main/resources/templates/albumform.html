@@ -3,12 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Album Form</title>
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Patua+One&display=swap" rel="stylesheet">
 
-<body>
-<a href="/">Home</a><br/>
-<a href="/albumlist">Album list</a>&nbsp;&nbsp;<a href="/songlist">Song list</a><br/>
-<a href="/addalbum">Add an Album</a>&nbsp;&nbsp;<a href="/addsong">Add a Song</a><br/>
+
+</head>
+<body  >
+
+<div class="jumbotron " >
+    <h1 style="font-family: 'Dancing Script', cursive;
+font-family: 'Patua One', cursive;">Welcome to Emily's Website</h1>
+    <h3 style="font-family: 'Dancing Script', cursive;color:darkred;">This is a fun place to post your information.</h3>
+</div>
+
+<nav id="nav_bar">
+    <ul id="navmenu">
+        <li><a class="current" href="/home1">Home</a></li>
+        <li ><a href="/add">Post Your Message</a></li>
+        <li><a href="/">All Posts</a></li>
+        <li><a href="/search">Search by Name</a></li>
+    </ul>
+</nav><br/>
+
+
+<div style="width: 1000px;height: 600px;margin-left: 300px;" class="row">
 
         <h1 >Album Form</h1>
 
@@ -27,7 +53,7 @@
             <input type="submit" value="Submit" />
 
         </form>
-
+</div>
 </body>
 
 </html>
