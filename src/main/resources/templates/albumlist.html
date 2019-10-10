@@ -9,6 +9,7 @@
 
 <body>
 <a href="/">Home</a><br/>
+<a href="/songlist">Song list</a><br/>
 <h1 >Album List</h1><a href="/addalbum">Add an Album</a>&nbsp;&nbsp;<a href="/addsong">Add a Song</a>
 
         <table>
@@ -19,6 +20,7 @@
 
             <tr th:each="album : ${albums}">
                 <td th:text="${album.name}"></td>
+                <td th:text="${album.company}"></td>
                 <td>
                     <a th:href="@{/update_album/{id}(id=${album.id})}">Update</a>
                     <a th:href="@{/detail_album/{id}(id=${album.id})}">Details</a>
@@ -26,6 +28,18 @@
                 </td>
             </tr>
         </table>
+
+<div th:each="album:${albums}">
+    <h2 th:text="${album.name}"></h2>
+    <h6 th:inline="text"> is belonged to [[${album.company}]].</h6>
+    <ul>
+        <th:block th:each="song:${album.songs}">
+            <li th:inline="text"><b>[[${song.songname}]]: </b>[[${song.description}]]</li>
+        </th:block>
+    </ul>
+
+
+</div>
 
 </body>
 
