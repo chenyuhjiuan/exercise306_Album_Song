@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Details</title>
+
+</head>
+<body>
+<a href="/">Home</a><br/>
+<h1 >Album Details</h1><a href="/addalbum">Add an Album</a>
+ Album Name: <span th:text="${album.name}"></span><br />
+
+<span>Songs:</span><br>
+
+    <tr>
+        <th>Song Name&nbsp;&nbsp;</th>
+        <th>Description</th>
+    </tr>
+
+    <tr th:each="song : ${album.songs}">
+        <td th:text="${song.songname}"></td>
+        <td th:text="${song.description}"></td>
+    </tr>
+</body>
+
+</html>

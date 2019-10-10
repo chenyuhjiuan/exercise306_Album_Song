@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Detail</title>
+
+</head>
+
+<body>
+<a href="/">Home</a><br/>
+<a href="/addalbum">Add an Album</a>&nbsp;&nbsp;<a href="/addsong">Add a Song</a>
+<br/>
+<h1 >Song Details</h1>
+Song Name: <span th:text="${song.songname}"></span><br />
+Descriptioin: <span th:text="${song.description}"></span><br />
+Album Name: <span th:text="${song.album.name}"></span><br />
+</body>
+
+</html>

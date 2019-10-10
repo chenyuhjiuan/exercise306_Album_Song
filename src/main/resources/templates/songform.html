@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+</head>
+
+<body>
+<a href="/">Home</a><br/>
+<a href="/addalbum">Add an Album</a>&nbsp;&nbsp;<a href="/addsong">Add a Song</a>
+<br/>
+<h1>Song Form</h1>
+
+        <form action="#" th:action="@{/processSong}" th:object="${song}" method="post">
+
+            <input type="hidden" th:field="*{id}" />
+
+            Song Name:&nbsp;<input type="text" th:field="*{songname}" />
+
+            <span th:if="${#fields.hasErrors('songname')}" th:errors="*{songname}">&nbsp;&nbsp;</span>
+
+            Description:&nbsp;&#8239;<input type="text" th:field="*{description}" />
+
+            <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}"></span>
+
+            <br>
+
+            Album:&nbsp;<select name="album" th:field="*{album}">
+
+            <option th:each="album : ${albums}"
+
+                    th:value="${album.id}"
+
+                    th:text="${album.name}"></option>
+
+        </select>
+
+            <br>
+
+            <input type="submit" value="Submit">
+
+        </form>
+</body>
+
+</html>

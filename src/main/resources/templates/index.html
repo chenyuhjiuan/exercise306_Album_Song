@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+</head>
+
+<body>
+<a href="/addalbum">Add an Album</a>&nbsp;&nbsp;<a href="/addsong">Add a Song</a>
+<br/>
+<h1>Albums</h1>
+    <table>
+        <tr>
+            <th>Album Name&nbsp;</th>
+            <th>Company Name</th>
+        </tr>
+        <tr th:each="album : ${albums}">
+
+            <td th:text="${album.name}"></td>
+            <td>
+                <a th:href="@{update_album/{id}(id=${album.id})}">Update</a>
+                <a th:href="@{detail_album/{id}(id=${album.id})}">Details</a>
+                <a th:href="@{delete_album/{id}(id=${album.id})}">Delete</a>
+            </td>
+        </tr>
+    </table>
+
+<h1 >Songs</h1>
+
+            <table>
+                <tr>
+                    <th>Song Name&nbsp;&nbsp;</th>
+                    <th>Description&nbsp;&nbsp;</th>
+                </tr>
+                <tr th:each="song : ${songs}">
+                    <td th:text="${song.songname}"></td>
+                    <td th:text="${song.description}"></td>
+                    <td th:text="${song.album.name}"></td>
+                    <td>
+                        <a th:href="@{update_song/{id}(id=${song.id})}">Update</a>
+                        <a th:href="@{detail_song/{id}(id=${song.id})}">Details</a>
+                        <a th:href="@{delete_song/{id}(id=${song.id})}">Delete</a>
+                    </td>
+                </tr>
+            </table>
+</body>
+
+</html>
